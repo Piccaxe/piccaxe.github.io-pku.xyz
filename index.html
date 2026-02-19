@@ -48,27 +48,48 @@
       100% { width: 0%; }
     }
 
-    .dots {
-      animation: dots 1.5s infinite;
-    }
-
-    @keyframes dots {
-      0% { content: ""; }
-      33% { content: "."; }
-      66% { content: ".."; }
-      100% { content: "..."; }
-    }
-
     .why {
       color: red;
       display: block;
       margin-top: 1rem;
-      animation: pulse 1s infinite alternate;
+      font-size: 1.2rem;
+      position: relative;
+      animation: glitch 1s infinite;
     }
 
-    @keyframes pulse {
-      from { transform: scale(1); }
-      to { transform: scale(1.1); }
+    @keyframes glitch {
+      0% {
+        transform: translate(0);
+        text-shadow: 2px 2px #000, -2px -2px #f00;
+      }
+      20% {
+        transform: translate(-2px, 2px);
+        text-shadow: 2px -2px #0ff, -2px 2px #f0f;
+      }
+      40% {
+        transform: translate(2px, -2px);
+        text-shadow: -2px 2px #f00, 2px -2px #0ff;
+      }
+      60% {
+        transform: translate(-1px, 1px);
+        text-shadow: 1px -1px #f0f, -1px 1px #ff0;
+      }
+      80% {
+        transform: translate(1px, -1px);
+        text-shadow: -1px 1px #0ff, 1px -1px #f00;
+      }
+      100% {
+        transform: translate(0);
+        text-shadow: 2px 2px #000, -2px -2px #f00;
+      }
+    }
+
+    .note {
+      font-family: 'Minecraftia', monospace;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      color: white;
+      text-shadow: 2px 2px #000;
     }
   </style>
 </head>
@@ -79,6 +100,9 @@
       <span class="strike">No Hello</span>
       <span class="why">WHY DM ME!!!</span>
     </h1>
+    <p class="note">
+      Would you really answer a Discord call just to sit there on deafen, you lonely chud?
+    </p>
   </div>
 
 </body>
