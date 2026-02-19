@@ -3,30 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NoHello-Styled Page</title>
+  <title>No Hello</title>
 
-  <!-- Basic styling -->
+  <!-- Minecraft Font -->
+  <link href="https://fonts.cdnfonts.com/css/minecraftia" rel="stylesheet">
+
   <style>
     :root {
-      --bg: #f7f7f7;
-      --text: #16161a;
-      --link: #0077cc;
-      --link-hover: #005fa3;
+      --bg: #55aa55;
+      --text: #ffffff;
+      --button: #3b7a3b;
+      --button-hover: #2e5e2e;
+      --border: #2b4d2b;
     }
 
     html.dark {
-      --bg: #16161a;
-      --text: #f7f7f7;
-      --link: #58a6ff;
-      --link-hover: #1f6feb;
+      --bg: #1e1e1e;
+      --text: #ffffff;
+      --button: #333333;
+      --button-hover: #444444;
+      --border: #111111;
     }
 
     html, body {
       margin: 0;
       padding: 0;
-      width: 100%;
       height: 100%;
-      font-family: "Inter", sans-serif;
+      font-family: 'Minecraftia', monospace;
       background: var(--bg);
       color: var(--text);
     }
@@ -40,34 +43,38 @@
 
     h1 {
       font-size: 3rem;
-      margin: 0;
-      padding: 0;
-      line-height: 1.2;
+      margin-bottom: 1rem;
+      text-shadow: 3px 3px #000;
     }
 
     p {
-      margin: 0.5rem 0 2rem;
-      font-size: 1rem;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
     }
 
     a {
       display: inline-block;
-      margin: 0.75rem 0;
+      margin: 0.75rem;
+      padding: 0.75rem 1.5rem;
+      background: var(--button);
+      color: white;
       text-decoration: none;
-      color: var(--link);
-      font-weight: bold;
-      font-size: 1rem;
+      border: 4px solid var(--border);
+      box-shadow: 4px 4px #000;
+      transition: all 0.1s ease;
     }
 
     a:hover {
-      color: var(--link-hover);
+      background: var(--button-hover);
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px #000;
     }
 
     .toggle-btn {
       margin-top: 2rem;
       cursor: pointer;
-      font-size: 0.9rem;
-      color: var(--link);
+      font-size: 0.8rem;
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -76,19 +83,17 @@
 
   <div>
     <h1>No Hello</h1>
-    <p>A simple directory of things worth linking.</p>
+    <p>Don't just say hello. Say what you need.</p>
 
-    <a href="https://example.com/1" target="_blank">Example Link 1</a><br />
-    <a href="https://example.org/2" target="_blank">Example Link 2</a><br />
-    <a href="https://example.net/3" target="_blank">Example Link 3</a><br />
-    <a href="https://example.info/4" target="_blank">Example Link 4</a>
+    <a href="#">Why?</a>
+    <a href="#">Examples</a>
+    <a href="#">Share</a>
 
     <div class="toggle-btn" onclick="toggleMode()">
-      Toggle Dark / Light Mode
+      Toggle Dark Mode
     </div>
   </div>
 
-  <!-- Optional dark/light mode -->
   <script>
     function toggleMode() {
       document.documentElement.classList.toggle("dark");
@@ -97,4 +102,3 @@
 
 </body>
 </html>
-
