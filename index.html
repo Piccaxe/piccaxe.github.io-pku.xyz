@@ -1,1 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NoHello-Styled Page</title>
+
+  <!-- Basic styling -->
+  <style>
+    :root {
+      --bg: #f7f7f7;
+      --text: #16161a;
+      --link: #0077cc;
+      --link-hover: #005fa3;
+    }
+
+    html.dark {
+      --bg: #16161a;
+      --text: #f7f7f7;
+      --link: #58a6ff;
+      --link-hover: #1f6feb;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+      padding: 0;
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 0.5rem 0 2rem;
+      font-size: 1rem;
+    }
+
+    a {
+      display: inline-block;
+      margin: 0.75rem 0;
+      text-decoration: none;
+      color: var(--link);
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    a:hover {
+      color: var(--link-hover);
+    }
+
+    .toggle-btn {
+      margin-top: 2rem;
+      cursor: pointer;
+      font-size: 0.9rem;
+      color: var(--link);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <h1>No Hello</h1>
+    <p>A simple directory of things worth linking.</p>
+
+    <a href="https://example.com/1" target="_blank">Example Link 1</a><br />
+    <a href="https://example.org/2" target="_blank">Example Link 2</a><br />
+    <a href="https://example.net/3" target="_blank">Example Link 3</a><br />
+    <a href="https://example.info/4" target="_blank">Example Link 4</a>
+
+    <div class="toggle-btn" onclick="toggleMode()">
+      Toggle Dark / Light Mode
+    </div>
+  </div>
+
+  <!-- Optional dark/light mode -->
+  <script>
+    function toggleMode() {
+      document.documentElement.classList.toggle("dark");
+    }
+  </script>
+
+</body>
+</html>
 
